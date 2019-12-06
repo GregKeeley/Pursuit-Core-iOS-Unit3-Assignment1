@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */; };
-		577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BED21BA8BA10083EB97 /* ViewController.swift */; };
+		577E5BEE21BA8BA10083EB97 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BED21BA8BA10083EB97 /* StocksViewController.swift */; };
 		577E5BF121BA8BA10083EB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BEF21BA8BA10083EB97 /* Main.storyboard */; };
 		577E5BF321BA8BA20083EB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BF221BA8BA20083EB97 /* Assets.xcassets */; };
 		577E5BF621BA8BA20083EB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BF421BA8BA20083EB97 /* LaunchScreen.storyboard */; };
 		577E5BFF21BA8C3B0083EB97 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BFE21BA8C3B0083EB97 /* userinfo.json */; };
 		577E5C0121BA8C5C0083EB97 /* applstockinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5C0021BA8C5C0083EB97 /* applstockinfo.json */; };
 		C16759CB239AF3F400AD44B3 /* RandomUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16759CA239AF3F400AD44B3 /* RandomUserViewController.swift */; };
+		C16759CD239AF50D00AD44B3 /* RandomUsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16759CC239AF50D00AD44B3 /* RandomUsersData.swift */; };
+		C16759CF239AF51700AD44B3 /* StocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16759CE239AF51700AD44B3 /* StocksData.swift */; };
+		C16759D1239AF8D800AD44B3 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16759D0239AF8D800AD44B3 /* UserDetailViewController.swift */; };
+		C16759D3239AF8E600AD44B3 /* StocksDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16759D2239AF8E600AD44B3 /* StocksDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		577E5BE821BA8BA10083EB97 /* PeopleAndAppleStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndAppleStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		577E5BED21BA8BA10083EB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		577E5BED21BA8BA10083EB97 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
 		577E5BF021BA8BA10083EB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		577E5BF221BA8BA20083EB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577E5BF521BA8BA20083EB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +32,10 @@
 		577E5BFE21BA8C3B0083EB97 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
 		577E5C0021BA8C5C0083EB97 /* applstockinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applstockinfo.json; sourceTree = "<group>"; };
 		C16759CA239AF3F400AD44B3 /* RandomUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserViewController.swift; sourceTree = "<group>"; };
+		C16759CC239AF50D00AD44B3 /* RandomUsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersData.swift; sourceTree = "<group>"; };
+		C16759CE239AF51700AD44B3 /* StocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksData.swift; sourceTree = "<group>"; };
+		C16759D0239AF8D800AD44B3 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		C16759D2239AF8E600AD44B3 /* StocksDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,10 @@
 		577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */ = {
 			isa = PBXGroup;
 			children = (
-				577E5BED21BA8BA10083EB97 /* ViewController.swift */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
-				C16759CA239AF3F400AD44B3 /* RandomUserViewController.swift */,
+				C16759CC239AF50D00AD44B3 /* RandomUsersData.swift */,
+				C16759CE239AF51700AD44B3 /* StocksData.swift */,
+				C16759D4239AF8F800AD44B3 /* View Controllers */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
 				577E5BF721BA8BA20083EB97 /* Info.plist */,
 			);
@@ -87,6 +96,17 @@
 				577E5C0021BA8C5C0083EB97 /* applstockinfo.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		C16759D4239AF8F800AD44B3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				577E5BED21BA8BA10083EB97 /* StocksViewController.swift */,
+				C16759D2239AF8E600AD44B3 /* StocksDetailViewController.swift */,
+				C16759CA239AF3F400AD44B3 /* RandomUserViewController.swift */,
+				C16759D0239AF8D800AD44B3 /* UserDetailViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +141,7 @@
 				TargetAttributes = {
 					577E5BE721BA8BA10083EB97 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -163,7 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C16759CB239AF3F400AD44B3 /* RandomUserViewController.swift in Sources */,
-				577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */,
+				C16759D3239AF8E600AD44B3 /* StocksDetailViewController.swift in Sources */,
+				C16759CD239AF50D00AD44B3 /* RandomUsersData.swift in Sources */,
+				C16759D1239AF8D800AD44B3 /* UserDetailViewController.swift in Sources */,
+				C16759CF239AF51700AD44B3 /* StocksData.swift in Sources */,
+				577E5BEE21BA8BA10083EB97 /* StocksViewController.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.PeopleAndAppleStockPrices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -337,7 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.PeopleAndAppleStockPrices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
