@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+struct Stocks {
+    let date: String
+    let open: Double
+    let label: String
+    let changeOverTime: Double
+    
+}
+
+extension Stocks {
+    static func getStocks() -> [Stocks] {
+        var stocks = [Stocks]()
+        guard let fileURL = Bundle.main.url(forResource: "applestockinfo", withExtension: "json") else {
+            fatalError("Could not locate applestocksinfo.json")
+        }
+        do {
+            let data = try Data(contentsOf: fileURL)
+        }
+    }
+}
