@@ -22,6 +22,15 @@ class RandomUserViewController: UIViewController {
     func loadData() {
         users = Users.getUsers()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userDetailVC = segue.destination as? UserDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow
+            else {
+                fatalError("Failed to properly prepare for segue ")
+        }
+        let user = users[indexPath.row]
+        userDetailVC.user = user
+    }
 }
 
 extension RandomUserViewController: UITableViewDataSource {

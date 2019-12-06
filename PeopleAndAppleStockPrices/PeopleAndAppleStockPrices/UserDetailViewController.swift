@@ -10,7 +10,21 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
 
+    @IBOutlet weak var dobLabel: UILabel!
+    @IBOutlet weak var registeredDateLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var cellLabel: UILabel!
+    
+    var user: Profile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    func updateUI() {
+        dobLabel.text = user?.dob
+        registeredDateLabel.text = user?.registered
+        phoneLabel.text = user?.phone
+        cellLabel.text = user?.cell
     }
 }
