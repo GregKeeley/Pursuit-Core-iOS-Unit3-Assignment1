@@ -8,22 +8,30 @@
 
 import Foundation
 
-struct Stocks {
+
+struct StockInfo: Codable {
     let date: String
+    let close: Double
     let open: Double
     let label: String
     let changeOverTime: Double
-    
+    let changePercent: Double
 }
 
-extension Stocks {
-    static func getStocks() -> [Stocks] {
-        var stocks = [Stocks]()
-        guard let fileURL = Bundle.main.url(forResource: "applestockinfo", withExtension: "json") else {
+extension StockInfo {
+    static func getStocks() -> [StockInfo] {
+        var stocks = [StockInfo]()
+        guard let fileURL = Bundle.main.url(forResource: "applstockinfo", withExtension: "json") else {
             fatalError("Could not locate applestocksinfo.json")
         }
         do {
             let data = try Data(contentsOf: fileURL)
+            let stockData = try JSONDecoder().decode([StockInfo].self, from: data)
+            stocks = stockData
+            
+        } catch {
+            fatalError("Failed to load contents: \(error)")
         }
+        return stocks
     }
 }
