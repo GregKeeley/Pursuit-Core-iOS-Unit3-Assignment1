@@ -10,10 +10,12 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
 
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var registeredDateLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var cellLabel: UILabel!
+    
     
     var user: Profile?
     
@@ -26,5 +28,6 @@ class UserDetailViewController: UIViewController {
         registeredDateLabel.text = user?.registered
         phoneLabel.text = user?.phone
         cellLabel.text = user?.cell
+        userImage.image = #imageLiteral(resourceName: "profileImage")
     }
 }

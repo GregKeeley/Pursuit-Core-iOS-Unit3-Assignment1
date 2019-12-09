@@ -11,17 +11,36 @@ import UIKit
 class RandomUserViewController: UIViewController {
 // Reuse ID: "userCell"
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var users = [Profile]()
+    @IBOutlet weak var noResultsLabel: UILabel!
+    
+    var users = [Profile]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         tableView.dataSource = self
+        noResultsLabel.isHidden = true
         loadData()
         print(users.count)
+    }
+    func searchUsers(for searchText: String) {
+        guard !searchText.isEmpty else { return }
+        users = Users.getUsers().filter( { $0.name.last.lowercased().contains(searchText.lowercased())})
     }
     func loadData() {
         users = Users.getUsers()
     }
+    func noResults() {
+        if users.isEmpty == true {
+            noResultsLabel.isHidden = false
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userDetailVC = segue.destination as? UserDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow
@@ -31,6 +50,7 @@ class RandomUserViewController: UIViewController {
         let user = users[indexPath.row]
         userDetailVC.user = user
     }
+    
 }
 
 extension RandomUserViewController: UITableViewDataSource {
@@ -46,4 +66,25 @@ extension RandomUserViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension RandomUserViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            return
+        }
+        searchUsers(for: searchText)
+        noResults()
+        searchBar.resignFirstResponder()
+        return
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard searchText.isEmpty else {
+            searchUsers(for: searchText)
+            print("\(searchText)")
+            noResults()
+            return
+        }
+
+    }
 }
